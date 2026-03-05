@@ -108,6 +108,66 @@ export default function Index() {
         </div>
       </section>
 
+      {/* OUR GOALS */}
+      <section className="py-24 px-6 wood-texture border-y border-amber-900/30">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-14">
+            <div className="ornament-line mb-6">
+              <span style={{ fontFamily: "Oswald, sans-serif", fontSize: "0.75rem", color: "#b8732a", letterSpacing: "0.3em", textTransform: "uppercase" }}>Миссия</span>
+            </div>
+            <h2 className="mb-4" style={{ fontFamily: "Cormorant Garamond, serif", fontSize: "clamp(2rem, 5vw, 3.5rem)", color: "#f5e6c8" }}>
+              Наши <em style={{ color: "#d4a428" }}>цели</em>
+            </h2>
+            <p className="max-w-2xl mx-auto" style={{ fontFamily: "Cormorant Garamond, serif", fontSize: "1.15rem", color: "#c8b99a", fontStyle: "italic" }}>
+              Мы варим не просто пиво — мы создаём культуру и храним традиции
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                icon: "Shield",
+                title: "Сохранять традиции",
+                text: "Передавать из поколения в поколение немецкие рецепты и принципы Reinheitsgebot — закона о чистоте пива 1516 года.",
+              },
+              {
+                icon: "Leaf",
+                title: "Натуральные ингредиенты",
+                text: "Использовать только солод, хмель, воду и дрожжи. Никаких консервантов, красителей и искусственных добавок.",
+              },
+              {
+                icon: "TrendingUp",
+                title: "Расти, сохраняя душу",
+                text: "Увеличивать объёмы производства, не жертвуя качеством. Каждая партия — под личным контролем пивовара.",
+              },
+              {
+                icon: "Users",
+                title: "Развивать пивную культуру",
+                text: "Проводить экскурсии, дегустации и мастер-классы, чтобы люди понимали и ценили настоящее крафтовое пиво.",
+              },
+              {
+                icon: "MapPin",
+                title: "Поддерживать регион",
+                text: "Работать с местными фермерами и поставщиками, вкладываться в развитие местного сообщества.",
+              },
+              {
+                icon: "Award",
+                title: "Задавать стандарт качества",
+                text: "Участвовать в международных конкурсах и подтверждать, что российское крафтовое пиво — мирового уровня.",
+              },
+            ].map((goal, i) => (
+              <div key={i} className="card-brew p-8 flex flex-col items-start gap-4">
+                <div className="w-12 h-12 flex items-center justify-center rounded-sm" style={{ backgroundColor: "rgba(212, 164, 40, 0.15)", border: "1px solid rgba(184, 115, 42, 0.3)" }}>
+                  <Icon name={goal.icon} size={22} style={{ color: "#d4a428" }} />
+                </div>
+                <h3 style={{ fontFamily: "Cormorant Garamond, serif", fontSize: "1.3rem", color: "#f5e6c8" }}>{goal.title}</h3>
+                <p style={{ fontFamily: "Cormorant Garamond, serif", fontSize: "1rem", color: "#c8b99a", lineHeight: 1.7 }}>{goal.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* PRODUCTS PREVIEW */}
       <section className="py-24 px-6 wood-texture">
         <div className="max-w-6xl mx-auto">
